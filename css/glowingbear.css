@@ -109,7 +109,7 @@ input#sendMessage {
 .panel input, .panel .input-group {
     max-width: 300px;
 }
-input[type=text], input[type=password], .badge {
+input[type=text], input[type=password] {
     border: 0;
     border-radius: 0;
     color: #ccc;
@@ -173,6 +173,7 @@ input[type=text], input[type=password], .badge {
     background: #282828;
 }
 #sidebar {
+    line-height: 21px;
     position: fixed;
     width: 140px;
     min-height: 100%;
@@ -181,7 +182,8 @@ input[type=text], input[type=password], .badge {
     overflow-x: hidden;
     padding-top: 35px; /* topbar */
     padding-bottom: 1px; /* need to force a padding here */
-    font-size: smaller;
+    font-size: 10px;
+    text-transform: uppercase;
     -webkit-transition:0.35s ease all;
     transition:0.35s ease all;
 }
@@ -195,12 +197,19 @@ input[type=text], input[type=password], .badge {
 }
 
 #sidebar .badge {
-    border-radius: 0;
-    margin-right: -15px;
+    border-radius: 10px;
+    margin: 3px -5px 0 0;
+    font-size: 9px;
+    font-weight: 300;
+    text-shadow: 1px 1px #333;
+    padding: 2px 5px;
+    background-color: #555;
 }
 
 #sidebar ul.indented li.indent span.buffername {
-    padding-left: 10px;
+    color: #AFAFAF;
+    text-transform: none;
+    font-size: 14px;
 }
 
 #sidebar.ng-hide {
@@ -246,8 +255,10 @@ input[type=text], input[type=password], .badge {
 
 .nav-pills > li > a {
     border-radius: 0;
-    color: #ddd;
+    color: #676767;
+    padding: 3px 13px;
 }
+
 .nav-pills > li > a:hover, .nav-pills > li > a:hover span {
     color: #222;
 }
@@ -299,7 +310,7 @@ input[type=text], input[type=password], .badge {
 }
 
 .danger, .alert-danger, .badge .alert-danger {
-    background-color: rgb(217, 83, 79);
+    background-color: #CB0012 !important;
     color: #ddd;
 }
 .alert-danger {
