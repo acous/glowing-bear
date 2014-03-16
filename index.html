@@ -130,8 +130,7 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse">
               <div class="panel-body">
-                If you check the encryption box, the communication between browser and WeeChat will be encrypted.<br>
-                <strong>Note</strong>: Due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=594502">bug</a> encryption will not work in Firefox. Unless you are using a certificate trusted by your browser, you must also first visit the URL https://weechathost:relayport/ to mark the certificate as trusted.</p>
+                <p>If you check the encryption box, the communication between browser and WeeChat will be encrypted</p>
                 If you want to use an encrypted session you first have to set up the relay to use SSL. It is easiest to use a self-signed certificate, which you can create like this:
 <pre>
 $ mkdir -p ~/.weechat/ssl
@@ -143,6 +142,8 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
 /relay sslcertkey
 /relay add ssl.weechat 8000
 </pre>
+                <p><span class="label label-danger">Important note for self-signed certificates</span></p>
+                <p>You must visit the URL <strong>https://weechathost:relayport/</strong> before you log in to glowing bear. This is needed for your browser to trust the SSL certificate.</p>
               </div>
             </div>
           </div>
